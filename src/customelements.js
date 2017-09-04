@@ -7,7 +7,7 @@
             this.addAttributeListener = Factory.addEventListener;
             this.removeAttributeListener = Factory.removeEventListener;
             this.attributeChangedCallback = function(attribute, oldValue, newValue){
-                Factory.dispatchEvent(attribute, {detail: {oldValue: oldValue, newValue: newValue, attribute: attribute}});
+                Factory.dispatchEvent(attribute, {detail: {oldValue: oldValue, newValue: newValue, value: newValue, attribute: attribute}});
             }
             this.attachShadow({mode:'open'});
         }
