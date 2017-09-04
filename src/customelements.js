@@ -4,8 +4,8 @@
         constructor(){
             super();
             const Factory = new Events.Factory();
-            this.addAttributeListener = Factory.addEventListener.bind(Factory);
-            this.removeAttributeListener = Factory.removeEventListener.bind(Factory);
+            this.addAttributeListener = Factory.addEventListener;
+            this.removeAttributeListener = Factory.removeEventListener;
             this.attributeChangedCallback = function(attribute, oldValue, newValue){
                 Factory.dispatchEvent(attribute, {detail: {oldValue: oldValue, newValue: newValue, attribute: attribute}});
             }
